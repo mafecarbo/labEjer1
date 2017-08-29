@@ -42,6 +42,11 @@ public class Carro {
     public void setHorasalida(int horasalida) {
         this.horasalida = horasalida;
     }
+    public String InformacionCarro (){
+        String info;
+        info=this.placa+" "+this.horallegada;
+        return info;
+    }
     
     
 }

@@ -34,10 +34,4 @@ public class ZonaTemporal {
         this.hueco = hueco;
     }
     
-
-    
-
-   
-    
-    
 }

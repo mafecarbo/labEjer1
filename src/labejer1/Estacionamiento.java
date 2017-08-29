@@ -35,5 +35,14 @@ public class Estacionamiento {
     public boolean Lleno (){
         return this.carros != null;
     }
+    public String InfoEsta (){
+        if (this.Lleno()){
+            return this.carros.InformacionCarro()+" "+this;
+        }
+        else {
+            return null;
+        }
+    }
+    
     
 }
