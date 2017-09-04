@@ -45,7 +45,11 @@ public class Parqueadero {
         this.zonas = zonas;
     }
     public String ZonaMenos (){
-        if (this.zonas[0].ContarEs()<=this.zonas[1].ContarEs() && this.zonas[0].ContarEs()<=this.zonas[2].ContarEs() ){
+        if(this.zonas[0].ContarEs()==5 && this.zonas[1].ContarEs()==5&& this.zonas[2].ContarEs()==5){
+            return "Parquedero lleno regrese despues, gracias por su visita"; 
+        }
+        else{
+           if (this.zonas[0].ContarEs()<=this.zonas[1].ContarEs() && this.zonas[0].ContarEs()<=this.zonas[2].ContarEs() ){
             return "Zona 1";
         }
         else if(this.zonas[1].ContarEs()<=this.zonas[0].ContarEs() && this.zonas[1].ContarEs()<=this.zonas[2].ContarEs() ){
@@ -53,9 +57,34 @@ public class Parqueadero {
         }
         else{
             return "Zona 3";
-        } 
+        }  
+        }
     }
-    
-    
-    
+    public String Informacion(Carro carros){
+        int a=0;
+        for (int i=0; i<3; i++){
+            if(this.zonas[i].InfoZona(carros)==null){
+                a++;    
+            }
+            else {
+                return this.zonas[i].InfoZona(carros);
+            }
+        }
+        if(a==3) {
+            return "Su carro no se encuentra en este parqueadero";   
+        }
+        else {
+            return null;
+        }   
+    }
+    public String Estacionar (String nombre){
+        for (int i=0; i<5; i++){
+          if(this.zonas[i].getNombreZ().equals(nombre)){
+              return this.zonas[i].Desocupado();
+          } else {
+              return null;
+            }  
+        }
+        return null;
+    } 
 }

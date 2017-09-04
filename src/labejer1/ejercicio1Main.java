@@ -44,12 +44,12 @@ public class ejercicio1Main {
         Carro c1= new Carro ("UCR821", 1100);
         Carro c2= new Carro ("COL123", 1130);
         Carro c3= new Carro ("FRA921", 1200);
+        Carro c4= new Carro("QRT935",1300);
         e1[0].setCarros(c1);
         e1[1].setCarros(c3);
         e2[0].setCarros(c2);
-        String que;
-        que=p.ZonaMenos();
-        System.out.println(que);
+        System.out.println(p.ZonaMenos());
+        System.out.println(p.Informacion(c4));
     }
     
 }

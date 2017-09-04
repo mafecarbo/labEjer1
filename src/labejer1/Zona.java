@@ -52,5 +52,20 @@ public class Zona {
         }
         return contador;
     }
-    
+   public String InfoZona(Carro carros){
+       for (int i=0; i<5; i++){
+           if (this.espacio[i].getCarros()==carros){
+               return this.espacio[i].InfoEsta()+", en la "+this.NombreZ;
+           }
+       }
+       return null;
+   }
+   public String Desocupado (){
+       for (int i=0; i<5; i++){
+           if (this.espacio[i].Lleno()==false){
+               return "Estacionamiento "+this.espacio[i].getNumero();
+           }
+       }
+       return null;
+   }
 }

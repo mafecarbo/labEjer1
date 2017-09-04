@@ -36,13 +36,9 @@ public class Estacionamiento {
         return this.carros != null;
     }
     public String InfoEsta (){
-        if (this.Lleno()){
-            return this.carros.InformacionCarro()+" "+this;
-        }
-        else {
-            return null;
-        }
+        return this.carros.InformacionCarro()+" esta en el estacionamiento "+this.getNumero();
     }
+    
     
     
 }
